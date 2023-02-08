@@ -16,8 +16,8 @@ sudo権限が必要
 sudo gglog [OPTIONS]
 ```
 ### Options
-- `-v`: バージョン情報を表示
-- `-h`：ヘルプを表示
-- `-t`：直近更新されたログファイルのtailを表示
-- `-l`：`logs/` 配下のファイルを一覧表示
+- `-c`  display a log file which updated latest
+- `-h`  print help information
+- `-l`  display a list of log files
+- `-V`  print version information
 
