@@ -5,15 +5,15 @@ greengrassのログをいい感じに表示してくれるプログラム．
 ## Install
 Releaseページから最新のバイナリをダウンロードし，実行権限を付与して`/usr/local/bin/`に配置．
 ```bash
-wget https://github.com/tskawada/gglog/releases/download/v0.01/ggcat
-chmod 755 ggcat
-sudo mv ggcat /usr/local/bin/
+wget https://github.com/tskawada/gglog/releases/download/v0.01/gglog
+chmod 755 gglog
+sudo mv gglog /usr/local/bin/
 ```
 
 ## Usage
 sudo権限が必要
 ```bash
-sudo ggcat [OPTIONS]
+sudo gglog [OPTIONS]
 ```
 ### Options
 - `-v`: バージョン情報を表示
