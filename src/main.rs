@@ -2,11 +2,13 @@ use clap::{App, Arg};
 use std::process::Command;
 
 fn main() {
-    let latest: Arg = Arg::new("latest")
-        .long("latest")
+    let current: Arg = Arg::new("current")
+        .short('c')
+        .long("current")
         .help("display a log file which updated latest");
 
     let list: Arg = Arg::new("list")
+        .short('l')
         .long("list")
         .help("display a list of log files");
 
@@ -14,12 +16,12 @@ fn main() {
         .author("tskawada")
         .version("v0.0.1")
         .about("gglog is a tool for viewing AWS Greengrass log")
-        .arg(latest)
+        .arg(current)
         .arg(list);
     
     match app.try_get_matches() {
         Ok(matches) => {
-            if matches.is_present("latest") {
+            if matches.is_present("current") {
                 let mut _process = Command::new("bash")
                     .arg("-c")
                     .current_dir("/greengrass/v2/logs")
